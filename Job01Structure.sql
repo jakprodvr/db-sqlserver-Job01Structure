@@ -27,3 +27,25 @@ on delete cascade
 )
 go
 
+----------------------------------------
+CREATE PROCEDURE spDep_InsertReg 
+
+@dep_buildinglevel int ,
+@dep_name varchar(20),
+@dep_manager  varchar(30)
+
+as
+
+INSERT INTO [Department]
+(
+	  [dep_buildinglevel]
+     ,[dep_name]
+     ,[dep_manager]
+)           
+     VALUES
+(
+	   @dep_buildinglevel      
+      ,@dep_name
+      ,@dep_manager
+)
+GO
