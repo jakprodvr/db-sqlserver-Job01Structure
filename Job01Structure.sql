@@ -85,3 +85,35 @@ exec sp_Emp_InsertReg
 @emp_name='Freddie Dole',
 @emp_hiredate='2021/02/02',
 @emp_salary=993.25
+
+
+----------------------------------------
+
+
+DROP TABLE [Job01Structure].[Department];
+
+DROP TABLE [Department];
+
+DROP TABLE Employees_copy02 
+
+DROP TABLE [Employees];
+
+SELECT *  FROM [Department];
+
+SELECT *  FROM [Employees];
+
+
+SELECT *  FROM [Employees_copy01];
+
+
+delete from  [Department]
+where dep_id > 50
+
+
+delete from [Employees];
+
+
+UPDATE [Employees]  
+    SET emp_name = 'Rafael Rivas'  
+    WHERE empl_id = 1 
+
