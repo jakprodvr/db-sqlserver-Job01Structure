@@ -77,3 +77,11 @@ INSERT INTO [Employees]
 )
 
 GO
+----------------------------------------
+
+
+exec sp_Emp_InsertReg 
+@dep_id=2,
+@emp_name='Freddie Dole',
+@emp_hiredate='2021/02/02',
+@emp_salary=993.25
