@@ -49,3 +49,31 @@ INSERT INTO [Department]
       ,@dep_manager
 )
 GO
+----------------------------------------
+
+CREATE PROCEDURE sp_Emp_InsertReg 
+
+@dep_id int ,
+@emp_name varchar(30),
+@emp_hiredate  date,
+@emp_salary  decimal(10,2)
+
+as
+
+INSERT INTO [Employees]
+(
+	[dep_id],
+     [emp_name],
+     [emp_hiredate],
+     [emp_salary]
+    
+)           
+     VALUES
+( 
+     @dep_id,
+     @emp_name,
+     @emp_hiredate,
+     @emp_salary	
+)
+
+GO
