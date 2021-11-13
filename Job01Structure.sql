@@ -117,3 +117,39 @@ UPDATE [Employees]
     SET emp_name = 'Rafael Rivas'  
     WHERE empl_id = 1 
 
+
+--------------------------------------------------
+
+--creating copy of a table--
+
+DROP TABLE  Employees_copy01;
+
+SELECT *
+INTO Employees_copy01
+FROM  Employees
+WHERE 1 = 0;
+
+
+
+INSERT INTO Employees_copy01 
+    SELECT  * 
+    FROM Employees;  
+
+
+CREATE TABLE Employees_copy02 
+( emp_name varchar(30) not null,
+emp_hiredate  date not null,
+);  
+GO 
+
+INSERT INTO  Employees_copy02  
+    SELECT emp_name, emp_hiredate
+    FROM Employees;
+GO
+
+
+--sql server list all tables
+SELECT CAST(table_name as varchar)  FROM INFORMATION_SCHEMA.TABLES
+
+--------------------------------------------------
+
