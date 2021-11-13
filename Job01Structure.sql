@@ -1,4 +1,9 @@
 
+
+--sql server list all tables
+SELECT CAST(table_name as varchar)  FROM INFORMATION_SCHEMA.TABLES
+
+
 drop database  Job01Structure;
 
 create database Job01Structure;
@@ -147,9 +152,6 @@ INSERT INTO  Employees_copy02
     FROM Employees;
 GO
 
-
---sql server list all tables
-SELECT CAST(table_name as varchar)  FROM INFORMATION_SCHEMA.TABLES
 
 --------------------------------------------------
 
